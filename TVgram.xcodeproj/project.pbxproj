@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2119D9791A7F80F30044EF0B /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119D9781A7F80F30044EF0B /* ServerAPI.swift */; };
 		2143AA651A6A6CB700570C63 /* try@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143AA641A6A6CB700570C63 /* try@2x.png */; };
 		2143AA671A6A70F700570C63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143AA661A6A70F700570C63 /* QuartzCore.framework */; };
 		2194AB5C1A664DFF004CBDF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2119D9781A7F80F30044EF0B /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		2143AA641A6A6CB700570C63 /* try@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "try@2x.png"; sourceTree = "<group>"; };
 		2143AA661A6A70F700570C63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2194AB561A664DFF004CBDF4 /* TVgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 		A5FA8ED51A7D765C00D40678 /* ServerComunication */ = {
 			isa = PBXGroup;
 			children = (
+				2119D9781A7F80F30044EF0B /* ServerAPI.swift */,
 			);
 			name = ServerComunication;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				A51411D71A7E610000189FDB /* WatchViewController.swift in Sources */,
 				21FE952F1A69461D00F93DD2 /* LoginViewController.swift in Sources */,
 				A51411DB1A7E62E000189FDB /* WatchTableViewCell.swift in Sources */,
+				2119D9791A7F80F30044EF0B /* ServerAPI.swift in Sources */,
 				2194AB5E1A664DFF004CBDF4 /* ViewController.swift in Sources */,
 				2194AB5C1A664DFF004CBDF4 /* AppDelegate.swift in Sources */,
 			);

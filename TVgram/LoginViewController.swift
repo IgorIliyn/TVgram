@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

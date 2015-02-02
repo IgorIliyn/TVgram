@@ -9,9 +9,9 @@
 import UIKit
 
 class WatchItem: NSObject {
-    let name: NSString!
-    let season: NSNumber!
-    let series: NSNumber!
-    let season_name: NSString!
-    let image_url: NSString!
+    var name: NSString!
+    var season: NSNumber!
+    var series: NSNumber!
+    var season_name: NSString!
+    var image_url: NSString!
 }

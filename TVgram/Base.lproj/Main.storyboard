@@ -187,15 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-oc-BNq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fxD-JL-4nV" id="PhV-kd-nfh"/>
-                                    <outlet property="delegate" destination="fxD-JL-4nV" id="LCZ-nt-yZw"/>
-                                </connections>
-                            </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-Ki-ANi">
+                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-Ki-ANi">
                                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -204,11 +196,34 @@
                                     <tabBarItem title="Буду смотреть" image="star-icon.png" id="9rL-dy-I2S"/>
                                     <tabBarItem title="Постмотрел" image="checked-icon.png" id="ptf-3A-Mdq"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="fxD-JL-4nV" id="CPO-8i-TKm"/>
+                                </connections>
                             </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-oc-BNq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fxD-JL-4nV" id="PhV-kd-nfh"/>
+                                    <outlet property="delegate" destination="fxD-JL-4nV" id="LCZ-nt-yZw"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sC6-Ki-ANi" firstAttribute="top" secondItem="BEA-oc-BNq" secondAttribute="bottom" id="4w4-HY-xgW"/>
+                            <constraint firstItem="BEA-oc-BNq" firstAttribute="top" secondItem="i3e-Bm-oSu" secondAttribute="bottom" id="XtM-ET-BjI"/>
+                            <constraint firstItem="3Nk-TJ-Cbq" firstAttribute="top" secondItem="sC6-Ki-ANi" secondAttribute="bottom" id="tAV-ai-622"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5fy-TP-lrf"/>
+                    <navigationItem key="navigationItem" id="5fy-TP-lrf">
+                        <barButtonItem key="leftBarButtonItem" image="menu-icon.png" id="aMt-9k-BXk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="dpg-4S-wg1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tabBar" destination="sC6-Ki-ANi" id="dvZ-NB-x2S"/>
                         <outlet property="tableView" destination="BEA-oc-BNq" id="thI-gc-SU0"/>
@@ -243,6 +258,7 @@
         <image name="button_green.png" width="540" height="96"/>
         <image name="checked-icon.png" width="24" height="24"/>
         <image name="eye-icon.png" width="26" height="16"/>
+        <image name="menu-icon.png" width="20" height="14"/>
         <image name="random-icon.png" width="30" height="13"/>
         <image name="star-icon.png" width="27" height="25"/>
         <image name="try.png" width="251" height="17"/>

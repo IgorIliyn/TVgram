@@ -10,8 +10,16 @@ import UIKit
 
 class WatchTableViewCell: UITableViewCell {
 
+    @IBOutlet var name: UILabel!
+    @IBOutlet var season: UILabel!
+    @IBOutlet var imageTV: UIImageView!
+    @IBOutlet var loader: UIActivityIndicatorView!
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var seasonName: UILabel!
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
     }
 
     required init(coder aDecoder: NSCoder) {
