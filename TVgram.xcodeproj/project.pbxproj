@@ -10,6 +10,7 @@
 		2119D9791A7F80F30044EF0B /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119D9781A7F80F30044EF0B /* ServerAPI.swift */; };
 		2143AA651A6A6CB700570C63 /* try@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143AA641A6A6CB700570C63 /* try@2x.png */; };
 		2143AA671A6A70F700570C63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143AA661A6A70F700570C63 /* QuartzCore.framework */; };
+		21574C351A80D04F00606571 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574C341A80D04F00606571 /* TabBarController.swift */; };
 		2194AB5C1A664DFF004CBDF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */; };
 		2194AB5E1A664DFF004CBDF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194AB5D1A664DFF004CBDF4 /* ViewController.swift */; };
 		2194AB611A664DFF004CBDF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2194AB5F1A664DFF004CBDF4 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		2119D9781A7F80F30044EF0B /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		2143AA641A6A6CB700570C63 /* try@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "try@2x.png"; sourceTree = "<group>"; };
 		2143AA661A6A70F700570C63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		21574C341A80D04F00606571 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2194AB561A664DFF004CBDF4 /* TVgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2194AB5A1A664DFF004CBDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21574C361A80D09A00606571 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2194AB5D1A664DFF004CBDF4 /* ViewController.swift */,
+				21FE952E1A69461D00F93DD2 /* LoginViewController.swift */,
+				A51411D61A7E610000189FDB /* WatchViewController.swift */,
+				21574C341A80D04F00606571 /* TabBarController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		2194AB4D1A664DFF004CBDF4 = {
 			isa = PBXGroup;
 			children = (
@@ -139,13 +152,11 @@
 		2194AB581A664DFF004CBDF4 /* TVgram */ = {
 			isa = PBXGroup;
 			children = (
+				21574C361A80D09A00606571 /* Controllers */,
 				A51411D81A7E62BA00189FDB /* Views */,
 				A5FA8ED81A7D77F000D40678 /* Models */,
 				A5FA8ED51A7D765C00D40678 /* ServerComunication */,
 				2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */,
-				2194AB5D1A664DFF004CBDF4 /* ViewController.swift */,
-				21FE952E1A69461D00F93DD2 /* LoginViewController.swift */,
-				A51411D61A7E610000189FDB /* WatchViewController.swift */,
 				2194AB5F1A664DFF004CBDF4 /* Main.storyboard */,
 				2194AB621A664DFF004CBDF4 /* Images.xcassets */,
 				2194AB641A664DFF004CBDF4 /* LaunchScreen.xib */,
@@ -360,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FA8ED71A7D76B100D40678 /* WatchItem.swift in Sources */,
+				21574C351A80D04F00606571 /* TabBarController.swift in Sources */,
 				A51411D71A7E610000189FDB /* WatchViewController.swift in Sources */,
 				21FE952F1A69461D00F93DD2 /* LoginViewController.swift in Sources */,
 				A51411DB1A7E62E000189FDB /* WatchTableViewCell.swift in Sources */,

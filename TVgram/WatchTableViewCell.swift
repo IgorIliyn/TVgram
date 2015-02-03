@@ -37,7 +37,11 @@ class WatchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    override func reuseIdentifier()->NSString{
-//        return "Cell"
-//    }
+    func reuseIdentifier() -> NSString{
+        return "Cell"
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
 }

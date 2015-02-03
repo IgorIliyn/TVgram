@@ -14,4 +14,5 @@ class WatchItem: NSObject {
     var series: NSNumber!
     var season_name: NSString!
     var image_url: NSString!
+    var image: UIImage!
 }

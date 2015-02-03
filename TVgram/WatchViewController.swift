@@ -10,19 +10,11 @@ import UIKit
 
 class WatchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var tableView: UITableView!
     var items: NSMutableArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Смотрю"
-        //self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-
-        //var it: UITabBarItem = self.tabBar.items[0] as UITabBarItem
-        var image = UIImage(named: "header.png")
-        self.navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
         items = NSMutableArray()
         let nib:UINib = UINib(nibName:"WatchTableViewCell", bundle:nil)
         //self.tableView.registerClass(WatchTableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -110,21 +102,27 @@ class WatchViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.name.text = item.name
         cell.season.text = item.season.stringValue + " сезон, " + item.series.stringValue + " серия:"
         cell.seasonName.text = item.season_name
-        cell.loader.startAnimating()
+        
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            var data = NSData(contentsOfURL: NSURL(string: item.image_url)!)
-            if data != nil {
-                dispatch_async(dispatch_get_main_queue()) {
-                    // update some UI
-                    cell.imageTV.image = UIImage(data: data!)
-                    cell.imageTV.layer.masksToBounds = true
-                    cell.imageTV.layer.cornerRadius = 5;
-                    cell.loader.stopAnimating()
+        if item.image == nil {
+            cell.loader.startAnimating()
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                var data = NSData(contentsOfURL: NSURL(string: item.image_url)!)
+                item.image = UIImage(data:data!)
+                if data != nil {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        // update some UI
+                        
+                        cell.imageTV.image = UIImage(data: data!)
+                        cell.imageTV.layer.masksToBounds = true
+                        cell.imageTV.layer.cornerRadius = 5;
+                        cell.loader.stopAnimating()
+                    }
                 }
             }
+        }else{
+            cell.loader.stopAnimating()
         }
-        
         return cell
         
     }
