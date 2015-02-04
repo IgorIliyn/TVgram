@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         self.navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
         self.title = "Смотрю"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         var array:NSArray = self.tabBar.items!
         self.selectedIndex = 1
        
@@ -39,4 +39,5 @@ class TabBarController: UITabBarController {
             break
         }
     } // called when a new view is selected by the user (but not programatically)
+   
 }
