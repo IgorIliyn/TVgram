@@ -20,7 +20,7 @@ class WatchViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //self.tableView.registerClass(WatchTableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
         // Do any additional setup after loading the view.
-
+        self.tabBarItem.selectedImage =  UIImage(named: "eye-icon_active.png")
         var url: NSURL = NSURL(string: "http://www.test.tvgram.ru/upload.php")!
         
         var downloadTask: NSURLSessionDataTask = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data: NSData! , response: NSURLResponse! , error: NSError!) -> Void in

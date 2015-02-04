@@ -188,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vjm-Wq-XhC">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="iE5-pu-6jU" id="Pbi-fF-ZGD"/>
@@ -199,10 +199,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NtF-RE-g2T" firstAttribute="top" secondItem="Vjm-Wq-XhC" secondAttribute="bottom" id="hKb-r7-ghj"/>
-                            <constraint firstItem="Vjm-Wq-XhC" firstAttribute="top" secondItem="b0n-ld-fdE" secondAttribute="bottom" id="xMG-9A-GpU"/>
+                            <constraint firstItem="Vjm-Wq-XhC" firstAttribute="top" secondItem="Kvv-u2-H4r" secondAttribute="topMargin" id="y9h-Wp-9n9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Смотрю" image="eye-icon.png" id="Oob-qc-rRT"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Смотрю" image="eye-icon.png" id="Oob-qc-rRT"/>
                     <connections>
                         <outlet property="tableView" destination="Vjm-Wq-XhC" id="fAJ-OX-UZ0"/>
                     </connections>
@@ -214,7 +214,7 @@
         <!--Всё сразу-->
         <scene sceneID="I5y-EA-Vre">
             <objects>
-                <viewController id="bSh-ge-YMf" sceneMemberID="viewController">
+                <viewController id="bSh-ge-YMf" customClass="AllViewController" customModule="TVgram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Or1-Ja-9jb"/>
                         <viewControllerLayoutGuide type="bottom" id="7JY-3R-OGm"/>
@@ -233,7 +233,7 @@
         <!--Буду смотреть-->
         <scene sceneID="Qjh-WK-9bB">
             <objects>
-                <viewController id="Y0f-dY-rsn" sceneMemberID="viewController">
+                <viewController id="Y0f-dY-rsn" customClass="WillWatchViewController" customModule="TVgram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bVj-An-GK5"/>
                         <viewControllerLayoutGuide type="bottom" id="7Lp-U1-JOL"/>
@@ -243,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Буду смотреть" image="star-icon.png" id="N0w-V6-Int"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Буду смотреть" image="star-icon.png" id="N0w-V6-Int"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssi-Dn-XZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +281,7 @@
         <!--Посмотрел-->
         <scene sceneID="S7Z-1A-rjj">
             <objects>
-                <viewController id="jKZ-tr-5fg" sceneMemberID="viewController">
+                <viewController id="jKZ-tr-5fg" customClass="WatchedViewController" customModule="TVgram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fG6-Co-7gt"/>
                         <viewControllerLayoutGuide type="bottom" id="g1D-5q-Bb3"/>
@@ -291,69 +291,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Посмотрел" image="checked-icon.png" id="nOo-iv-ZrD"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Посмотрел" image="checked-icon.png" id="nOo-iv-ZrD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeT-xh-eaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="654"/>
-        </scene>
-        <!--Watch View Controller-->
-        <scene sceneID="DTd-H3-8ab">
-            <objects>
-                <viewController id="fxD-JL-4nV" customClass="WatchViewController" customModule="TVgram" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i3e-Bm-oSu"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Nk-TJ-Cbq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7ot-Mz-H4p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-Ki-ANi">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Все сразу" image="random-icon.png" id="pC1-lr-nPa"/>
-                                    <tabBarItem title="Смотрю" image="eye-icon.png" id="lRb-ap-2kj"/>
-                                    <tabBarItem title="Буду смотреть" image="star-icon.png" id="9rL-dy-I2S"/>
-                                    <tabBarItem title="Постмотрел" image="checked-icon.png" id="ptf-3A-Mdq"/>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="fxD-JL-4nV" id="CPO-8i-TKm"/>
-                                </connections>
-                            </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-oc-BNq">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="fxD-JL-4nV" id="PhV-kd-nfh"/>
-                                    <outlet property="delegate" destination="fxD-JL-4nV" id="LCZ-nt-yZw"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="sC6-Ki-ANi" firstAttribute="top" secondItem="BEA-oc-BNq" secondAttribute="bottom" id="4w4-HY-xgW"/>
-                            <constraint firstItem="BEA-oc-BNq" firstAttribute="top" secondItem="i3e-Bm-oSu" secondAttribute="bottom" id="XtM-ET-BjI"/>
-                            <constraint firstItem="3Nk-TJ-Cbq" firstAttribute="top" secondItem="sC6-Ki-ANi" secondAttribute="bottom" id="tAV-ai-622"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="5fy-TP-lrf">
-                        <barButtonItem key="leftBarButtonItem" image="menu-icon.png" id="aMt-9k-BXk">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="dpg-4S-wg1">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tabBar" destination="sC6-Ki-ANi" id="dvZ-NB-x2S"/>
-                        <outlet property="tableView" destination="BEA-oc-BNq" id="thI-gc-SU0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DEF-5A-8sS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2433" y="646"/>
+            <point key="canvasLocation" x="1810" y="646"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uMy-by-cix">

@@ -11,6 +11,9 @@
 		2143AA651A6A6CB700570C63 /* try@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143AA641A6A6CB700570C63 /* try@2x.png */; };
 		2143AA671A6A70F700570C63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143AA661A6A70F700570C63 /* QuartzCore.framework */; };
 		21574C351A80D04F00606571 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574C341A80D04F00606571 /* TabBarController.swift */; };
+		21574C381A820AFC00606571 /* WillWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574C371A820AFC00606571 /* WillWatchViewController.swift */; };
+		21574C3A1A820B2A00606571 /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574C391A820B2A00606571 /* AllViewController.swift */; };
+		21574C3C1A820B4000606571 /* WatchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21574C3B1A820B4000606571 /* WatchedViewController.swift */; };
 		2194AB5C1A664DFF004CBDF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */; };
 		2194AB5E1A664DFF004CBDF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194AB5D1A664DFF004CBDF4 /* ViewController.swift */; };
 		2194AB611A664DFF004CBDF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2194AB5F1A664DFF004CBDF4 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		2143AA641A6A6CB700570C63 /* try@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "try@2x.png"; sourceTree = "<group>"; };
 		2143AA661A6A70F700570C63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21574C341A80D04F00606571 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		21574C371A820AFC00606571 /* WillWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WillWatchViewController.swift; sourceTree = "<group>"; };
+		21574C391A820B2A00606571 /* AllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
+		21574C3B1A820B4000606571 /* WatchedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchedViewController.swift; sourceTree = "<group>"; };
 		2194AB561A664DFF004CBDF4 /* TVgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2194AB5A1A664DFF004CBDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2194AB5B1A664DFF004CBDF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				21FE952E1A69461D00F93DD2 /* LoginViewController.swift */,
 				A51411D61A7E610000189FDB /* WatchViewController.swift */,
 				21574C341A80D04F00606571 /* TabBarController.swift */,
+				21574C371A820AFC00606571 /* WillWatchViewController.swift */,
+				21574C391A820B2A00606571 /* AllViewController.swift */,
+				21574C3B1A820B4000606571 /* WatchedViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -371,12 +380,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FA8ED71A7D76B100D40678 /* WatchItem.swift in Sources */,
+				21574C3C1A820B4000606571 /* WatchedViewController.swift in Sources */,
 				21574C351A80D04F00606571 /* TabBarController.swift in Sources */,
 				A51411D71A7E610000189FDB /* WatchViewController.swift in Sources */,
 				21FE952F1A69461D00F93DD2 /* LoginViewController.swift in Sources */,
 				A51411DB1A7E62E000189FDB /* WatchTableViewCell.swift in Sources */,
 				2119D9791A7F80F30044EF0B /* ServerAPI.swift in Sources */,
+				21574C3A1A820B2A00606571 /* AllViewController.swift in Sources */,
 				2194AB5E1A664DFF004CBDF4 /* ViewController.swift in Sources */,
+				21574C381A820AFC00606571 /* WillWatchViewController.swift in Sources */,
 				2194AB5C1A664DFF004CBDF4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

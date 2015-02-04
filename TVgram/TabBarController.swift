@@ -16,6 +16,27 @@ class TabBarController: UITabBarController {
         self.navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
         self.title = "Смотрю"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        var array:NSArray = self.tabBar.items!
+        self.selectedIndex = 1
+       
     }
-    
+    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!){
+        switch item.tag {
+        case 0:
+            self.title = "Всё сразу"
+            break
+        case 1:
+            self.title = "Смотрю"
+            break
+        case 2:
+            self.title = "Буду смотреть"
+            break
+        case 3:
+            self.title = "Посмотрел"
+            break
+        default:
+            break
+        }
+    } // called when a new view is selected by the user (but not programatically)
 }
